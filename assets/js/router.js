@@ -12,7 +12,14 @@ const routes = {
 };
 
 export function router() {
-  const hash = window.location.hash;
+  let hash = window.location.hash;
+  
+  // Default to #home if no hash is present
+  if (!hash || hash === "") {
+    window.location.hash = "#home";
+    return;
+  }
+  
   const controller = routes[hash] || homeController;
   controller();
 }
