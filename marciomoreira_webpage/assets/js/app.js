@@ -22,7 +22,6 @@ async function init() {
 
     // after navbar loaded, wire up active-link handling
     setupNavActive();
-    setupNavToggle();
     router();
   } catch (err) {
     console.error("App init error:", err);
@@ -49,27 +48,4 @@ function setupNavActive(){
     update();
     window.addEventListener('hashchange', update);
   }catch(e){console.error('nav active setup failed', e)}
-}
-
-// Mobile hamburger toggle for fetched navbar component
-function setupNavToggle(){
-  try{
-    const container = document.getElementById('navbar');
-    if(!container) return;
-    const toggleBtn = container.querySelector('#nav-toggle');
-    const menu = container.querySelector('#nav-menu');
-    const links = container.querySelectorAll('#nav-menu a');
-
-    if(!toggleBtn || !menu) return;
-
-    const closeMenu = () => menu.classList.remove('active');
-    const openClose = () => menu.classList.toggle('active');
-
-    // Use click for broad mobile support
-    toggleBtn.addEventListener('click', openClose, { passive: true });
-
-    // Close after navigating
-    links.forEach(a => a.addEventListener('click', closeMenu, { passive: true }));
-    window.addEventListener('hashchange', closeMenu, { passive: true });
-  }catch(e){console.error('nav toggle setup failed', e)}
 }
