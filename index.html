@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Márcio Moreira | Full Stack Developer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" type="image/png" href="assets/img/starwarsFavi.png">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+  <nav id="navbar"></nav>
+  <main class="container" id="app"></main>
+  <footer id="footer"></footer>
+
+  <script>
+    // Flat single-file SPA (no modules, no fetch) — works via file://
+
+    /* --- Data service --- */
+    function getProjects() {
+      return [
+        { name: "The Lord of the Bricks", tech: ["Java", "OOP"], link: "https://teamsting-canifetes-cfa.itch.io/the-lord-of-the-bricks" },
+        { name: "EduConnect", tech: ["Java", "Hibernate", "MVC"] },
+        { name: "MiniTube", tech: ["JavaScript", "HTML", "CSS"] },
+        { name: "MyJavaBank", tech: ["Java", "Spring Boot", "REST"] },
+        
+      ];
+    }
+
+    /* --- Views --- */
+    /* --- Navbar config (flat) --- */
+    let NAV_ITEMS = [
+      { hash: '#home', label: 'Home' },
+      { hash: '#about', label: 'About' },
+      { hash: '#projects', label: 'Projects' },
+      { hash: '#contact', label: 'Contact' }
+    ];
+    let FORM_ENDPOINT = "https://formspree.io/f/mwvvavqb";
+
+    function homeView() {
+      return `
+    <section class="starwars-light">
+      <div class="crawl-container">
+        <div class="crawl">
+          <div class="episode">Episode I</div>
+          <h1>A New Journey</h1>
+          
+          <p>
+            It is a time of opportunity. In a rapidly evolving digital galaxy, a Junior Full Stack Developer
+            emerges from the Code for All_ Bootcamp, trained in the disciplines of Java, JavaScript and clean 
+            architectural thinking. Through intensive practice, long coding sessions and collaborative challenges, 
+            the foundations of problem solving, adaptability and technical rigor are forged.
+          </p>
+
+          <p>
+            From the first lines of code to complete applications, each challenge strengthens the understanding 
+            of how systems communicate, how data flows and how users interact with technology. Bugs are faced, 
+            refactored and ultimately defeated, revealing the true power of persistence and structured thinking.
+          </p>
+
+          <p>
+            Guided by curiosity and determination, Márcio Moreira explores the web galaxy, transforming abstract 
+            ideas into functional, user-focused applications. With each project, complexity is reduced, 
+            responsibilities are clearly separated and maintainability becomes a core principle rather than 
+            an afterthought.
+          </p>
+
+          <p>
+            Along the journey, modern development practices are embraced and refined: modular design, MVC-inspired 
+            architectures, RESTful communication and agile workflows. Version control, code reviews and teamwork 
+            become essential tools, enabling steady progress and continuous improvement across every mission.
+          </p>
+
+          <p>
+            As frontend and backend systems converge, attention is given to clarity, performance and user experience. 
+            Interfaces are crafted to be intuitive, responsive and accessible, while underlying logic is designed 
+            to remain scalable, testable and resilient under change.
+          </p>
+
+          <p>
+            The mission is clear. To write clean, readable and maintainable code. To embrace continuous learning 
+            in a universe that never stops evolving. And to bring balance between creativity and structure, 
+            innovation and reliability, frontend and backend systems.
+          </p>
+
+          <p>
+            The path ahead leads toward real-world challenges, meaningful projects and teams where collaboration, 
+            communication and technical excellence shape solutions with lasting impact. The Force of clean code 
+            is strong, and the journey has only just begun.
+          </p>
+        </div>
+      </div>
+      <div class="skills-overlay">
+        <h2 class="skills-title">Stack</h2>
+        <div class="skills-grid">
+          <span class="skill-item" style="animation-delay: 45s;">Java</span>
+          <span class="skill-item" style="animation-delay: 45.2s;">Jira</span>
+          <span class="skill-item" style="animation-delay: 45.4s;">JavaScript</span>
+          <span class="skill-item" style="animation-delay: 45.6s;">Azure</span>
+          <span class="skill-item" style="animation-delay: 45.8s;">Python</span>
+          <span class="skill-item" style="animation-delay: 46s;">Jenkins</span>
+          <span class="skill-item" style="animation-delay: 46.2s;">Haskell</span>
+          <span class="skill-item" style="animation-delay: 46.4s;">TFS</span>
+          <span class="skill-item" style="animation-delay: 46.6s;">C</span>
+          <span class="skill-item" style="animation-delay: 46.8s;">SQL / MySql</span>
+          <span class="skill-item" style="animation-delay: 47s;">Assembly</span>
+          <span class="skill-item" style="animation-delay: 47.2s;">SOQL</span>
+          <span class="skill-item" style="animation-delay: 47.4s;">Git</span>
+          <span class="skill-item" style="animation-delay: 47.6s;">PostgreSql</span>
+          <span class="skill-item" style="animation-delay: 47.8s;">HTML</span>
+          <span class="skill-item" style="animation-delay: 48s;">Hibernate</span>
+          <span class="skill-item" style="animation-delay: 48.2s;">CSS</span>
+          <span class="skill-item" style="animation-delay: 48.4s;">Ant/Maven</span>
+          <span class="skill-item" style="animation-delay: 48.6s;">Apex</span>
+          <span class="skill-item" style="animation-delay: 48.8s;">Spring</span>
+          <span class="skill-item" style="animation-delay: 49s;">Scrum</span>
+          <span class="skill-item" style="animation-delay: 49.2s;">Agile</span>
+          <span class="skill-item" style="animation-delay: 49.4s;">AWS</span>
+          <span class="skill-item" style="animation-delay: 49.6s;">Prompt Engineering</span>
+          <span class="skill-item" style="animation-delay: 49.8s;">Postman</span>
+          <span class="skill-item" style="animation-delay: 50s;">Swagger</span>
+          <span class="skill-item" style="animation-delay: 50.2s;">API</span>
+          <span class="skill-item" style="animation-delay: 50.4s;">BootStrap</span>
+          <span class="skill-item" style="animation-delay: 50.6s;">RAG</span>
+        </div>
+      </div>
+    </section>
+  `;
+    }
+
+
+
+    function aboutView() {
+
+      return `
+    <section>
+   
+     
+      <h2>About</h2>
+         <div class="about-me-container">
+      <p><strong>Hello!</strong></p>
+
+<p>
+  Here’s a bit about me and my journey into the world of software development.
+</p>
+
+<p>
+  I’m <strong>Márcio Moreira</strong>, a Full Stack Developer with a strong
+  foundation in <strong>Java, JavaScript, HTML, CSS</strong> and modern development
+  practices. I recently completed the <strong>Code for All_ Full Stack Bootcamp</strong>,
+  where I built several projects focused on clean architecture, teamwork and problem solving.
+</p>
+
+<p>
+  My academic path began with a degree in <strong>Architecture</strong>, which shaped
+  my approach to structure, design thinking and long-term planning. This background
+  trained me to think in systems, balance creativity with technical constraints and
+  design solutions that are both functional and sustainable.
+</p>
+
+<p>
+  I later completed a degree in <strong>Computer Science</strong>, where I developed
+  a strong technical foundation in programming, algorithms, data structures and
+  software engineering principles. This formal training solidified my understanding
+  of how software systems are designed, implemented and maintained.
+</p>
+
+<p>
+  Alongside my academic journey, I built a strong background in sports.
+  I have worked as a <strong>Swimming Teacher</strong>, competed as a
+  <strong>Swimmer</strong> and played <strong>Water Polo</strong>. These experiences
+  strengthened my discipline, resilience, teamwork and goal-oriented mindset — qualities
+  I bring into every development project.
+</p>
+
+<p>
+  During my studies, I also gained experience in <strong>Marketing</strong>, which
+  improved my communication skills and ability to understand user needs and business
+  objectives. This helps me align technical decisions with real-world value and
+  user-focused outcomes.
+</p>
+
+<p>
+  My professional profile combines technical expertise with a strong sense of
+  responsibility, adaptability and communication. During the bootcamp, I worked in
+  <strong>agile, team-based environments</strong>, developing applications using
+  <strong>MVC principles</strong>, object-oriented programming and RESTful logic.
+</p>
+
+<p>
+  I enjoy transforming ideas into functional, user-focused applications and I’m
+  particularly interested in <strong>web development, data-driven solutions and
+  cloud-based technologies</strong>. I value clean code, continuous learning and
+  building solutions that are both scalable and maintainable.
+</p>
+
+<p>
+  Currently, I’m focused on strengthening my frontend skills, deepening my backend
+  knowledge and preparing to contribute to real-world projects where I can grow as
+  a developer and add value to a team.
+</p>
+<div id="resume-download" style="text-align: center; margin-top: 2rem;">
+  <a href="assets/files/MarcioMoreira-CV.pdf" target="_blank" class="btn-send" style="display: inline-block; padding: 0.5rem 1.5rem; margin-bottom: 2rem;  margin-top: 2rem; font-size: 0.9rem; text-decoration: none; background: #2a2a2a; border-radius: 12px;">
+    Download Resume (PDF)
+  </a>
+</div>       
+      </div>
+    </section>
+  `;
+    }
+
+    // Projects view implementation
+    function projectsView(projects) {
+      let items = (projects || []).map(function (p) {
+        return '<li class="list-group-item">' +
+          '<strong>' + (p.name || '') + '</strong>' +
+          '<div class="text-muted small">' + ((p.tech || []).join(', ')) + '</div>' +
+          '</li>';
+      }).join('');
+      return `\n      
+      <section>\n        
+        <h2>Projects</h2>\n       
+         <ul class="list-group">${items}</ul>\n      
+        </section>`;
+    }
+
+    function contactView() {
+      return `
+        <section class="contact-wrapper">
+          <div class="contact-card">
+            <h2>Contact Me</h2>
+            <p class="muted-contact" style="text-align: center;">Send me a note and it will land in my inbox.</p>
+            <form action="https://formspree.io/f/mwvvavqb" method="POST">
+              <div class="contact-field">
+                <label class="field-label" for="name">Your Name</label>
+                <input class="input" id="name" name="name" placeholder="Insert your name..." />
+              </div>
+              <div class="contact-field">
+                <label class="field-label" for="email">Email Address</label>
+                <input class="input" id="email" name="email" type="email" placeholder="What's your email address?" required />
+              </div>
+              <div class="contact-field">
+                <label class="field-label" for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="What you want to say?" class="input" required></textarea>
+              </div>
+              <div style="margin-top:1rem; margin-bottom:1rem; text-align:center">
+                <button class="btn-send" type="submit" style="background: #000; color: #ffd700; border: 2px solid #ffd700">Send</button>
+              </div>
+              <div class="contact-field">
+                <p class="muted-contact" style="text-align: center; margin-left: 4.3rem; margin-top: 2rem;">Follow me at: 
+                  <a href="https://www.linkedin.com/in/mmoreira/"  target="_blank" style="color:#9aa0ff; display: inline-block; margin-right: 0.5rem; margin-left: 0.5rem;">
+                    <img src="assets/img/linkedin.png" alt="LinkedIn" style="width:30px;height:30px;"/>
+                  </a> 
+                  <a href="https://github.com/MarcioMoreira"  target="_blank" style="color:#9aa0ff; display: inline-block;">
+                    <img src="assets/img/github.png" alt="GitHub" style="width:80px;height:30px;"/>
+                  </a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </section>
+      `;
+    }
+
+    /* --- Controllers (thin) --- */
+    function homeController() { document.getElementById('app').innerHTML = homeView(); }
+    function aboutController() { document.getElementById('app').innerHTML = aboutView(); }
+    function projectsController() { var p = getProjects(); document.getElementById('app').innerHTML = projectsView(p); }
+    function contactController() { document.getElementById('app').innerHTML = contactView(); }
+
+    /* --- Router --- */
+    let routes = {
+      '': homeController,
+      '#home': homeController,
+      '#about': aboutController,
+      '#projects': projectsController,
+      '#contact': contactController
+    };
+
+    let currentHash = '';
+    let pageOrder = ['', '#home', '#about', '#projects', '#contact'];
+
+    function router() {
+      let hash = window.location.hash;
+      let controller = routes[hash] || homeController;
+      let app = document.getElementById('app');
+
+      if (currentHash !== hash) {
+        let currentIndex = pageOrder.indexOf(currentHash || '');
+        let nextIndex = pageOrder.indexOf(hash || '');
+        let isGoingBack = nextIndex < currentIndex;
+
+        let slideOutClass = isGoingBack ? 'page-slide-out-back' : 'page-slide-out';
+        let slideInClass = isGoingBack ? 'page-slide-in-back' : 'page-slide-in';
+
+        app.classList.add(slideOutClass);
+
+        setTimeout(function () {
+          controller();
+          app.classList.remove(slideOutClass);
+          app.classList.add(slideInClass);
+
+          setTimeout(function () {
+            app.classList.remove(slideInClass);
+          }, 400);
+        }, 400);
+
+        currentHash = hash;
+      } else {
+        controller();
+      }
+    }
+
+    /* --- Static components (no fetch) --- */
+    function renderNavbar() {
+      let menuHtml = NAV_ITEMS.map(function (it) { return '<a href="' + it.hash + '" data-hash="' + it.hash + '">' + it.label + '</a>'; }).join('');
+      let html =
+        '<div class="nav-logo" id="nav-logo">' +
+        '<img src="assets/img/MM_StarWarsFavicon.png" alt="Logo Márcio Moreira" class="logo-nav" style="width:40px;height:40px; border-radius: 8px; border-color: #ffd700; border-width: 1px; border-style: solid;"/>' +
+
+        '<span class="logo-hover-text">Márcio Moreira Jedi Knight Coder</span>' +
+        '</div>' +
+        '<div class="container">' +
+        '<button class="nav-toggle" id="nav-toggle">☰</button>' +
+        '<div class="nav-menu" id="nav-menu">' + menuHtml + '</div>' +
+        '</div>';
+      document.getElementById('navbar').innerHTML = html;
+
+      let toggleBtn = document.getElementById('nav-toggle');
+      let menu = document.getElementById('nav-menu');
+      let menuLinks = menu.querySelectorAll('a');
+
+      toggleBtn.addEventListener('click', function () {
+        menu.classList.toggle('active');
+      });
+
+      menuLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.remove('active');
+        });
+      });
+
+      function updateActive() {
+        let hash = window.location.hash || '#home';
+        document.querySelectorAll('#navbar a').forEach(function (a) {
+          if (a.dataset.hash === hash) a.classList.add('active'); else a.classList.remove('active');
+        });
+      }
+
+      updateActive();
+      window.addEventListener('hashchange', updateActive);
+    }
+    function renderFooter() {
+      document.getElementById('footer').innerHTML = '<div class="container" id="footer-container" style="padding: 0rem 0;"><p class="small">©Márcio Moreira</p></div>';
+    }
+
+    /* --- Init --- */
+    function init() {
+      try {
+        renderNavbar(); renderFooter(); router();
+      } catch (e) {
+        let app = document.getElementById('app'); if (app) app.innerHTML = '<pre style="color:red">Init error: ' + (e && e.message || e) + '</pre>';
+        console.error(e);
+      }
+    }
+
+    window.addEventListener('hashchange', router);
+    window.addEventListener('load', init);
+  </script>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Márcio Moreira | Developer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Bootstrap (optional) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Inline favicon to avoid browser /favicon.ico 404 -->
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23007bff'/%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="container" id="app">
+    <!-- SPA content loads here -->
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    // Diagnostic fallback: show initialization message and surface JS errors
+    try {
+      const appEl = document.getElementById('app');
+      if (appEl) appEl.innerHTML = '<p id="init-msg">Initializing app...</p>';
+    } catch (e) { /* ignore */ }
+
+    window.addEventListener('error', (ev) => {
+      const appEl = document.getElementById('app');
+      if (appEl) appEl.innerHTML = `<pre style="color:red">JS Error: ${ev.message || ev.error || ev}</pre>`;
+      console.error('Captured error', ev);
+    });
+
+    window.addEventListener('unhandledrejection', (ev) => {
+      const appEl = document.getElementById('app');
+      if (appEl) appEl.innerHTML = `<pre style="color:red">Unhandled rejection: ${ev.reason || ev}</pre>`;
+      console.error('Unhandled rejection', ev);
+    });
+  </script>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+
+</html>
