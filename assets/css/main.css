@@ -149,6 +149,8 @@ nav a.active {
   .nav-toggle {
     display: block;
     color: #ffd700;
+    margin-left: auto;
+    margin-right: -0.8rem;
   }
 
   .nav-logo {
