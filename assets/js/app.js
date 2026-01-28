@@ -35,6 +35,43 @@ init();
 
 window.addEventListener("hashchange", router);
 
+// Auto-hide footer: show only when scrolling or at bottom
+(function setupFooterAutoHide() {
+  const footer = document.getElementById('footer');
+  if (!footer) return;
+
+  let scrollTimeout;
+  let isAtBottom = false;
+
+  function checkPosition() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
+    
+    isAtBottom = scrollTop + windowHeight >= docHeight - 10;
+    
+    if (isAtBottom) {
+      footer.classList.add('visible');
+    } else {
+      footer.classList.remove('visible');
+    }
+  }
+
+  function onScroll() {
+    footer.classList.add('visible');
+    
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      checkPosition();
+    }, 1000);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', checkPosition, { passive: true });
+  
+  checkPosition();
+})();
+
 function setupNavActive(){
   try{
     const container = document.getElementById('navbar');

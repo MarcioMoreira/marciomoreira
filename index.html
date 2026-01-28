@@ -367,6 +367,44 @@
 
     window.addEventListener('hashchange', router);
     window.addEventListener('load', init);
+
+    // Auto-hide footer: show only when scrolling or at bottom
+    window.addEventListener('load', function() {
+      const footer = document.getElementById('footer');
+      if (!footer) return;
+
+      let scrollTimeout;
+      let hasScrolled = false;
+
+      function checkPosition() {
+        if (!hasScrolled) return;
+        
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const windowHeight = window.innerHeight;
+        const docHeight = document.documentElement.scrollHeight;
+        
+        const isAtBottom = scrollTop + windowHeight >= docHeight - 10;
+        
+        if (isAtBottom) {
+          footer.classList.add('visible');
+        } else {
+          footer.classList.remove('visible');
+        }
+      }
+
+      function onScroll() {
+        hasScrolled = true;
+        footer.classList.add('visible');
+        
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function() {
+          checkPosition();
+        }, 1500);
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', checkPosition, { passive: true });
+    });
   </script>
 </body>
 
