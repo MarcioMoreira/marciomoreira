@@ -460,12 +460,16 @@
   <script>
     // Loader: hide after 3 seconds with genie effect
     (function() {
+      // Prevent scrollbars during loader
+      document.body.classList.add('loading');
+      
       const loader = document.getElementById('page-loader');
       if (loader) {
         setTimeout(() => {
           loader.classList.add('is-hiding');
           setTimeout(() => {
             loader.remove();
+            document.body.classList.remove('loading');
           }, 700); // Wait for animation to complete
         }, 3000); // Show for 3 seconds
       }

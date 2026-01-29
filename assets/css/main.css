@@ -16,6 +16,11 @@
   pointer-events: none;
 }
 
+/* Prevent scrollbars during loader */
+body.loading {
+  overflow: hidden;
+}
+
 .loader-card {
   width: 200px;
   height: 200px;
