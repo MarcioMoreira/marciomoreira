@@ -248,7 +248,9 @@ nav a.active {
     max-width: 200px;
   }
 
-  .nav-logo:hover .logo-hover-text {
+  .nav-logo:hover .logo-hover-text,
+  .nav-logo:active .logo-hover-text,
+  .nav-logo:focus .logo-hover-text {
     opacity: 1;
     margin-left: 6px;
   }
