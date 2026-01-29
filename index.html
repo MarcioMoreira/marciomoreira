@@ -5,19 +5,23 @@
   <meta charset="utf-8">
   <title>Márcio Moreira | Full Stack Developer</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Full Stack Developer specializing in Java, Spring Boot, JavaScript, and web applications. Portfolio showcasing real projects and professional expertise.">
-  <meta name="keywords" content="full stack developer, Java developer, Spring Boot, JavaScript, web development, portfolio, Márcio Moreira">
+  <meta name="description"
+    content="Full Stack Developer specializing in Java, Spring Boot, JavaScript, and web applications. Portfolio showcasing real projects and professional expertise.">
+  <meta name="keywords"
+    content="full stack developer, Java developer, Spring Boot, JavaScript, web development, portfolio, Márcio Moreira">
   <meta name="author" content="Márcio Moreira">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://marciomoreira.com">
   <meta property="og:title" content="Márcio Moreira | Full Stack Developer">
-  <meta property="og:description" content="Full Stack Developer specializing in Java, Spring Boot, JavaScript, and web applications.">
+  <meta property="og:description"
+    content="Full Stack Developer specializing in Java, Spring Boot, JavaScript, and web applications.">
   <meta property="og:image" content="https://marciomoreira.com/assets/img/MM_StarWars.png">
   <meta property="og:url" content="https://marciomoreira.com">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Márcio Moreira | Full Stack Developer">
-  <meta name="twitter:description" content="Full Stack Developer specializing in Java, Spring Boot, JavaScript, and web applications.">
+  <meta name="twitter:description"
+    content="Full Stack Developer specializing in Java, Spring Boot, JavaScript, and web applications.">
   <meta name="twitter:image" content="https://marciomoreira.com/assets/img/MM_StarWars.png">
   <link rel="icon" type="image/png" href="assets/img/starwarsFavi.png">
   <link rel="stylesheet" href="assets/css/main.css">
@@ -38,7 +42,7 @@
         { name: "EduConnect", tech: ["Java", "Hibernate", "MVC"] },
         { name: "MiniTube", tech: ["JavaScript", "HTML", "CSS"] },
         { name: "MyJavaBank", tech: ["Java", "Spring Boot", "REST"] },
-        
+
       ];
     }
 
@@ -137,6 +141,27 @@
           <span class="skill-item" style="animation-delay: 50.2s;">API</span>
           <span class="skill-item" style="animation-delay: 50.4s;">BootStrap</span>
           <span class="skill-item" style="animation-delay: 50.6s;">RAG</span>
+          <span class="skill-item" style="animation-delay: 50.8s;">Database Design</span>
+          <span class="skill-item" style="animation-delay: 51.0s;">SQL Optimization</span>
+          <span class="skill-item" style="animation-delay: 51.2s;">Transactions</span>
+          <span class="skill-item" style="animation-delay: 51.4s;">Responsive Design</span>
+          <span class="skill-item" style="animation-delay: 51.6s;">UX/UI Basics</span>
+          <span class="skill-item" style="animation-delay: 51.8s;">OAuth 2.0</span>
+          <span class="skill-item" style="animation-delay: 52.0s;">Microservices</span>
+          <span class="skill-item" style="animation-delay: 52.2s;">JUnit 5</span>
+          <span class="skill-item" style="animation-delay: 52.4s;">Mockito</span>
+          <span class="skill-item" style="animation-delay: 52.6s;">Integration Testing</span>
+          <span class="skill-item" style="animation-delay: 52.8s;">API Testing</span>
+          <span class="skill-item" style="animation-delay: 53.0s;">TDD</span>
+          <span class="skill-item" style="animation-delay: 53.2s;">GitHub Actions</span>
+          <span class="skill-item" style="animation-delay: 53.4s;">Cloud Deployment</span>
+          <span class="skill-item" style="animation-delay: 53.6s;">Environment Configuration</span>
+          <span class="skill-item" style="animation-delay: 53.8s;">SOLID Principles</span>
+          <span class="skill-item" style="animation-delay: 54.0s;">Clean Architecture</span>
+          <span class="skill-item" style="animation-delay: 54.2s;">Code Reviews</span>
+          <span class="skill-item" style="animation-delay: 54.4s;">Debugging</span>
+          <span class="skill-item" style="animation-delay: 54.6s;">AI-Assisted Development</span>
+          <span class="skill-item" style="animation-delay: 54.8s;">LLM Integration</span>
         </div>
       </div>
     </section>
@@ -383,7 +408,7 @@
     window.addEventListener('load', init);
 
     // Auto-hide footer: show only when scrolling or at bottom
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
       const footer = document.getElementById('footer');
       if (!footer) return;
 
@@ -392,13 +417,13 @@
 
       function checkPosition() {
         if (!hasScrolled) return;
-        
+
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const windowHeight = window.innerHeight;
         const docHeight = document.documentElement.scrollHeight;
-        
+
         const isAtBottom = scrollTop + windowHeight >= docHeight - 10;
-        
+
         if (isAtBottom) {
           footer.classList.add('visible');
         } else {
@@ -409,9 +434,9 @@
       function onScroll() {
         hasScrolled = true;
         footer.classList.add('visible');
-        
+
         clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(function() {
+        scrollTimeout = setTimeout(function () {
           checkPosition();
         }, 1500);
       }
@@ -459,10 +484,10 @@
 
   <script>
     // Loader: hide after 3 seconds with genie effect
-    (function() {
+    (function () {
       // Prevent scrollbars during loader
       document.body.classList.add('loading');
-      
+
       const loader = document.getElementById('page-loader');
       if (loader) {
         setTimeout(() => {
