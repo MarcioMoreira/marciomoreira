@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+
+Sitemap: https://marciomoreira.com/sitemap.xml
+
+# Allow crawling of specific assets
+Allow: /assets/
+Allow: /components/
+Allow: /*.html

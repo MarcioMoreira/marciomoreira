@@ -443,6 +443,12 @@
 
 <body>
 
+  <div id="page-loader" class="page-loader" aria-live="polite" aria-label="Loading">
+    <div class="loader-card">
+      <img src="assets/img/MM_StarWars.png" alt="Loading" />
+    </div>
+  </div>
+
   <div id="navbar"></div>
 
   <main class="container" id="app">
@@ -452,6 +458,19 @@
   <div id="footer"></div>
 
   <script>
+    // Loader: hide after 3 seconds with genie effect
+    (function() {
+      const loader = document.getElementById('page-loader');
+      if (loader) {
+        setTimeout(() => {
+          loader.classList.add('is-hiding');
+          setTimeout(() => {
+            loader.remove();
+          }, 700); // Wait for animation to complete
+        }, 3000); // Show for 3 seconds
+      }
+    })();
+
     // Diagnostic fallback: show initialization message and surface JS errors
     try {
       const appEl = document.getElementById('app');
