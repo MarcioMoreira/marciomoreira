@@ -605,7 +605,7 @@ textarea {
   padding: 2rem;
   z-index: 3;
   opacity: 0;
-  animation: fadeInSkills 2s ease-in-out 48s forwards;
+  animation: fadeInSkills 2s ease-in-out 44s forwards;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
