@@ -227,7 +227,8 @@ nav a.active {
 
   .nav-logo {
     padding: 0;
-    left: 0.5rem;
+    top: calc(2.3rem);
+    left: calc(1rem);
     border: none;
   }
 
@@ -845,4 +846,15 @@ textarea {
 .btn-send:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 28px rgba(44, 24, 175, 0.22)
+}
+
+/* Mobile: skills appear earlier */
+@media (max-width: 600px) {
+  .skills-overlay {
+    animation: fadeInSkills 2s ease-in-out 35s forwards;
+  }
+  
+  .skill-item {
+    animation-delay: 36s !important;
+  }
 }
