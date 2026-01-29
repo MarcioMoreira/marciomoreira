@@ -30,7 +30,7 @@ body.loading {
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 22px rgba(255, 215, 0, 0.35);
+  box-shadow: 0 0 22px rgba(255, 215, 0, 0.35), 0 0 40px rgba(255, 215, 0, 0.25), 0 0 60px rgba(255, 215, 0, 0.15), inset 0 0 20px rgba(255, 215, 0, 0.1);
   animation: loaderFloat 2.6s ease-in-out infinite;
 }
 
@@ -283,6 +283,46 @@ nav a.active {
 
   .nav-menu.active {
     display: flex;
+  }
+
+  .nav-menu.active a {
+    animation: cascadeDown 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+
+  .nav-menu.active a:nth-child(1) { animation-delay: 0s; }
+  .nav-menu.active a:nth-child(2) { animation-delay: 0.1s; }
+  .nav-menu.active a:nth-child(3) { animation-delay: 0.2s; }
+  .nav-menu.active a:nth-child(4) { animation-delay: 0.3s; }
+
+  .nav-menu a {
+    animation: cascadeUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+
+  .nav-menu:not(.active) a:nth-child(1) { animation-delay: 0.3s; }
+  .nav-menu:not(.active) a:nth-child(2) { animation-delay: 0.2s; }
+  .nav-menu:not(.active) a:nth-child(3) { animation-delay: 0.1s; }
+  .nav-menu:not(.active) a:nth-child(4) { animation-delay: 0s; }
+
+  @keyframes cascadeDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes cascadeUp {
+    from {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px) scale(0.95);
+    }
   }
 
   nav a {
