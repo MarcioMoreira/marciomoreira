@@ -372,7 +372,8 @@
       let menu = document.getElementById('nav-menu');
       let menuLinks = menu.querySelectorAll('a');
 
-      toggleBtn.addEventListener('click', function () {
+      toggleBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
         menu.classList.toggle('active');
       });
 
@@ -380,6 +381,17 @@
         link.addEventListener('click', function () {
           menu.classList.remove('active');
         });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function (e) {
+        if (menu.classList.contains('active')) {
+          let isClickInsideMenu = menu.contains(e.target);
+          let isClickOnToggle = toggleBtn.contains(e.target);
+          if (!isClickInsideMenu && !isClickOnToggle) {
+            menu.classList.remove('active');
+          }
+        }
       });
 
       function updateActive() {

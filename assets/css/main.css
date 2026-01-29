@@ -243,15 +243,23 @@ nav a.active {
     display: none;
   }
 
-  .logo-hover-text {
-    font-size: 0.65rem;
-    max-width: 200px;
+  .nav-logo {
+    -webkit-tap-highlight-color: transparent;
   }
 
-  .nav-logo:hover .logo-hover-text,
-  .nav-logo:active .logo-hover-text,
-  .nav-logo:focus .logo-hover-text {
+  .logo-hover-text {
+    font-size: 0.55rem;
+    max-width: 200px;
     opacity: 1;
+    margin-left: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .nav-logo:active .logo-hover-text {
+    opacity: 1;
+    max-width: 200px;
     margin-left: 6px;
   }
 
