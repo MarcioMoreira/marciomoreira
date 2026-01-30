@@ -358,7 +358,7 @@
       let menuHtml = NAV_ITEMS.map(function (it) { return '<a href="' + it.hash + '" data-hash="' + it.hash + '">' + it.label + '</a>'; }).join('');
       let html =
         '<div class="nav-logo" id="nav-logo">' +
-        '<img src="assets/img/MM_StarWarsFavicon.png" alt="Logo Márcio Moreira" class="logo-nav" style="width:40px;height:40px; border-radius: 8px; border-color: #ffd700; border-width: 1px; border-style: solid;"/>' +
+        '<img src="assets/img/MM_StarWars.png" alt="Logo Márcio Moreira" class="logo-nav" style="width:40px;height:40px; border-radius: 8px; border-color: #ffd700; border-width: 1px; border-style: solid;"/>' +
 
         '<span class="logo-hover-text">Márcio Moreira Jedi Knight Coder</span>' +
         '</div>' +
@@ -374,12 +374,25 @@
 
       toggleBtn.addEventListener('click', function (e) {
         e.stopPropagation();
-        menu.classList.toggle('active');
+        if (menu.classList.contains('active')) {
+          menu.classList.add('closing');
+          menu.classList.remove('active');
+          setTimeout(function () {
+            menu.classList.remove('closing');
+          }, 600);
+        } else {
+          menu.classList.add('active');
+          menu.classList.remove('closing');
+        }
       });
 
       menuLinks.forEach(function (link) {
         link.addEventListener('click', function () {
+          menu.classList.add('closing');
           menu.classList.remove('active');
+          setTimeout(function () {
+            menu.classList.remove('closing');
+          }, 600);
         });
       });
 
@@ -389,7 +402,11 @@
           let isClickInsideMenu = menu.contains(e.target);
           let isClickOnToggle = toggleBtn.contains(e.target);
           if (!isClickInsideMenu && !isClickOnToggle) {
+            menu.classList.add('closing');
             menu.classList.remove('active');
+            setTimeout(function () {
+              menu.classList.remove('closing');
+            }, 600);
           }
         }
       });
