@@ -249,17 +249,18 @@ nav a.active {
 
   .logo-hover-text {
     font-size: 0.55rem;
-    max-width: 200px;
+    max-width: 280px;
     opacity: 1;
     margin-left: 6px;
     white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
     transition: all 0.3s ease;
   }
 
   .nav-logo:active .logo-hover-text {
     opacity: 1;
-    max-width: 200px;
+    max-width: 280px;
     margin-left: 6px;
   }
 
@@ -282,7 +283,13 @@ nav a.active {
   }
 
   .nav-menu.active {
-    display: flex;
+    display: flex !important;
+    animation: backgroundFadeIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+
+  .nav-menu.closing {
+    display: flex !important;
+    animation: backgroundFadeOut 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   }
 
   .nav-menu a {
@@ -307,6 +314,24 @@ nav a.active {
   .nav-menu.closing a:nth-child(2) { animation-delay: 0.2s; }
   .nav-menu.closing a:nth-child(3) { animation-delay: 0.1s; }
   .nav-menu.closing a:nth-child(4) { animation-delay: 0s; }
+
+  @keyframes backgroundFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes backgroundFadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
 
   @keyframes cascadeDown {
     from {
