@@ -686,7 +686,7 @@ textarea {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 2rem;
+  padding: 0rem;
   z-index: 3;
   opacity: 0;
   animation: fadeInSkills 2s ease-in-out 44s forwards;
