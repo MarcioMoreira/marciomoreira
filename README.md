@@ -49,7 +49,7 @@ I am a developer with a background in Architecture and a passion for building—
 ### 🤝 Connect with Me
 
 <a href="[https://linkedin.com](https://www.linkedin.com/in/mmoreira)">
-  <img src="https://img.shields.io/badge/https%3A%2F%2Fimg.shields.io%2Fbadge%2Flinkedin" alt="LinkedIn">
+  <img src="https://img.shields.io/badge/linkedin" alt="LinkedIn">
 </a>
 
 ---
