@@ -44,9 +44,10 @@ I am a developer with a background in Architecture and a passion for building—
 
 *   **Computer Engineering** | University of Lisbon 🇵🇹
 *   **Full Stack Specialization** | Code for All_
-*   **Liferay Foundations**
-*   **Cybersecurity Junior Analyst** | Cisco Academy (In Progress)
 *   **Oracle Foundations** | (Pursuing Certification)
+*   **Cybersecurity Junior Analyst** | Cisco Academy (In Progress)
+*   **Liferay Foundations**
+
 
 ---
 
