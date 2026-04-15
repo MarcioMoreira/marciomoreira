@@ -48,7 +48,7 @@ I am a developer with a background in Architecture and a passion for building—
 
 ### 🤝 Connect with Me
 
-* **LinkedIn**
+* **LinkedIn
 <a href="https://www.linkedin.com/in/mmoreira">
   <img src="https://i.sstatic.net/gVE0j.png" alt="LinkedIn" width="25">
 </a>
