@@ -10,6 +10,7 @@ I am a developer with a background in Architecture and a passion for building—
 
 *   **Core Systems & Data:** Currently managing mission-critical logic as a **COBOL and PL/SQL Developer**, focusing on enterprise reliability and Oracle environments.
 *   **Full Stack Foundations:** Leveraging the **Java Spring** ecosystem and **JavaScript** to build modern, scalable web applications.
+*   **Enterprise Platforms (DXP):** Architecting modular solutions within the **Liferay** ecosystem, specializing in OSGi modularity and Client Extensions.
 *   **Cybersecurity & Hacking:** Junior Analyst path at **Cisco Academy**. Learning to think like a hacker to build resilient, "hardened" systems.
 *   **Game Development:** Blending storytelling and logic. Check out my latest game project: [The Lord of The Bricks](https://teamsting-canifetes-cfa.itch.io/the-lord-of-the-bricks).
 
@@ -20,6 +21,7 @@ I am a developer with a background in Architecture and a passion for building—
 #### **🧱 Foundations & Engineering**
 *   **Core Logic:** Java (OOP), Algorithms & Data Structures, Haskell (Functional Logic).
 *   **Principles:** Clean Code, SOLID, Design Patterns, MVC Architecture.
+*   **Liferay Architecture:** DXP Portlet development, Fragments, and Headless API integration.
 *   **Methodology:** Agile/Scrum, Version Control (Git/GitHub).
 *   **AI-Augmented Dev:** Advanced Prompt Engineering, AI-assisted Debugging, Unit Test Generation (JUnit/Mockito), and Documentation Refactoring.
 
@@ -33,6 +35,7 @@ I am a developer with a background in Architecture and a passion for building—
 #### **🎨 Frontend & UI/UX**
 *   **Core Web:** HTML5, CSS3, JavaScript (ES6+).
 *   **Frameworks:** React.
+*   **Liferay UI:** Clay (Lexicon), Theme development, and Responsive Design.
 *   **Modern Web:** Responsive Design, API Integration (Connecting Frontend to Backend).
 
 ---
@@ -40,9 +43,16 @@ I am a developer with a background in Architecture and a passion for building—
 ### 🎓 Education & Certifications
 
 *   **Computer Engineering** | University of Lisbon 🇵🇹
-*   **Full Stack Specialization** | Code for All_ 
+*   **Full Stack Specialization** | Code for All_
+*   **Liferay Foundations**
 *   **Cybersecurity Junior Analyst** | Cisco Academy (In Progress)
 *   **Oracle Foundations** | (Pursuing Certification)
+
+---
+
+### 🕹️ Featured Project: The Lord of The Bricks
+*Blending storytelling and logic.*  
+[Check out the repository here!](https://github.com](https://github.com/HugosGitStuff/arkanoid-clone-lotb)
 
 ---
 
