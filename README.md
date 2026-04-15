@@ -53,7 +53,7 @@ I am a developer with a background in Architecture and a passion for building—
 
 ### 🕹️ Featured Project: The Lord of The Bricks
 *Blending storytelling and logic.*  
-[Check out the repository here!](https://github.com](https://github.com/HugosGitStuff/arkanoid-clone-lotb)
+[Check out the repository here!](https://github.com/HugosGitStuff/arkanoid-clone-lotb)
 
 ---
 
