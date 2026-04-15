@@ -52,6 +52,12 @@ I am a developer with a background in Architecture and a passion for building—
   <img src="https://i.sstatic.net/gVE0j.png" alt="LinkedIn" width="25">
 </a>
 
+<p align="center">
+  <a href="https://linkedin.com">
+    <img src="https://sstatic.net" alt="LinkedIn" width="300">
+  </a>
+</p>
+
 ---
 
 ### 📊 GitHub Stats
