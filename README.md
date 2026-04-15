@@ -11,7 +11,7 @@ I am a developer with a background in Architecture and a passion for building—
 *   **Core Systems & Data:** Currently managing mission-critical logic as a **COBOL and PL/SQL Developer**, focusing on enterprise reliability and Oracle environments.
 *   **Full Stack Foundations:** Leveraging the **Java Spring** ecosystem and **JavaScript** to build modern, scalable web applications.
 *   **Cybersecurity & Hacking:** Junior Analyst path at **Cisco Academy**. Learning to think like a hacker to build resilient, "hardened" systems.
-*   **Game Development:** Blending storytelling and logic. Check out my latest project: [The Lord of The Bricks]([https://teamsting-canifetes-cfa.itch.io/the-lord-of-the-bricks]).
+*   **Game Development:** Blending storytelling and logic. Check out my latest project: [The Lord of The Bricks][https://teamsting-canifetes-cfa.itch.io/the-lord-of-the-bricks].
 
 ---
 
