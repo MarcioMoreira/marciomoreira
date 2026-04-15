@@ -28,7 +28,7 @@ I am a developer with a background in Architecture and a passion for building—
 #### **⚙️ Backend & Systems**
 *   **Frameworks:** Spring Boot, Spring MVC, JPA / Hibernate (ORM).
 *   **Enterprise Logic:** COBOL & PL/SQL (Mission-critical data handling).
-*   **API Design:** Creating & consuming RESTful APIs, Dependency Injection.
+*   **API Design:** Creating & consuming RESTful & SOAP APIs, Dependency Injection.
 *   **Databases:** SQL & Relational Design (MySQL, PostgreSQL, Oracle).
 *   **Testing:** Unit and Integration testing using JUnit and Mockito.
 
