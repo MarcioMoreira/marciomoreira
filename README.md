@@ -48,8 +48,7 @@ I am a developer with a background in Architecture and a passion for building—
 
 ### 🤝 Connect with Me
 
-[![LinkedIn](https://shields.io)](https://linkedin.com)
-[![Itch.io](https://shields.io)](https://itch.io)
+[![LinkedIn](https://shields.io)](https://www.linkedin.com/in/mmoreira/)
 
 ---
 
