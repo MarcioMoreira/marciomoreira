@@ -52,9 +52,3 @@ I am a developer with a background in Architecture and a passion for building—
   <img src="https://i.sstatic.net/gVE0j.png" alt="LinkedIn" width="25">
 </a>
 
-
----
-
-### 📊 GitHub Stats
-![Marcio's GitHub stats](https://vercel.app)
-![Top Langs](https://vercel.app)
