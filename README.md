@@ -47,6 +47,7 @@ I am a developer with a background in Architecture and a passion for building—
 *   **Oracle Foundations** | (Pursuing Certification)
 *   **Cybersecurity Junior Analyst** | Cisco Academy (In Progress)
 *   **Liferay Foundations**
+*   **Salesforce Platform Foundations**
 
 
 ---
