@@ -28,6 +28,7 @@ I am a developer with a background in Architecture and a passion for building—
 #### **⚙️ Backend & Systems**
 *   **Frameworks:** Spring Boot, Spring MVC, JPA / Hibernate (ORM).
 *   **Enterprise Logic:** COBOL & PL/SQL (Mission-critical data handling).
+*   **Salesforce (Apex, Triggers, Data Modeling)**.
 *   **API Design:** Creating & consuming RESTful & SOAP APIs, Dependency Injection.
 *   **Databases:** SQL & Relational Design (MySQL, PostgreSQL, Oracle).
 *   **Testing:** Unit and Integration testing using JUnit and Mockito.
@@ -46,9 +47,8 @@ I am a developer with a background in Architecture and a passion for building—
 *   **Full Stack Specialization** | Code for All_
 *   **Oracle Foundations** | (Pursuing Certification)
 *   **Cybersecurity Junior Analyst** | Cisco Academy (In Progress)
-*   **Liferay Foundations**
-*   **Salesforce Platform Foundations**
-
+*   **Liferay Foundations** | Professional DXP Implementation
+*   **Salesforce Platform Foundations** | 8 Months Professional Developer Experience
 
 ---
 
